@@ -1,0 +1,12 @@
+# Pin these to the EXACT versions from your Colab.
+# Get them by running in your notebook:
+#   !pip freeze | grep -iE "mne|scipy|statsmodels|numpy|pandas|seaborn|matplotlib|pingouin"
+# then paste the exact versions below (replace the >= with ==).
+mne==1.12.*        # stated in the manuscript; confirm the exact patch version
+scipy>=1.11
+statsmodels>=0.14
+numpy>=1.24
+pandas>=2.0
+seaborn>=0.12
+matplotlib>=3.7
+pingouin>=0.5      # only used for the ICC cross-check
