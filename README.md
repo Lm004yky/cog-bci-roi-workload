@@ -15,19 +15,20 @@ NOT redistributed here; only per-epoch/per-session derived metrics.
 - `v2_subject_workload_summary.csv` — per-subject summary
 
 ## Code
-- `EEG_v2_cleanup.ipynb` — preprocessing + feature extraction + figures
+- `EEG_Pipeline_v2.ipynb` — preprocessing (bandpass, ICA artifact rejection,
+  ROI extraction, Welch PSD) and feature extraction; produces the CSVs above
+- `EEG_v2_cleanup.ipynb` — MD5 deduplication, figures, summary tables
 - `code_fixes.py` — statistics (effect sizes, Holm/FDR correction, ICC + 95% CI,
   subject-level RM-ANOVA and cluster-robust sensitivity checks) and the Fig. 2 plot
 
 ## Reproducibility
-- Python: <FILL: e.g. 3.11.x>   OS: <FILL: e.g. Ubuntu 22.04 / Colab>
+- Python: <FILL: e.g. 3.11.x>   OS: Google Colab
 - Package versions: see `requirements.txt`
-- ICA: FastICA, 20 components, random_state = <FILL FROM YOUR PREPROCESSING CODE>,
-  max_iter = <FILL>
+- ICA: FastICA, 20 components, random_state = 42, max_iter = 500
 
 To reproduce the statistics: `pip install -r requirements.txt`, then run the
-BLOCK B/C/D cells of `code_fixes.py` on `v2_clean_epochs.csv` and
+BLOCK B/C/D cells of `code_fixes.py` on `v2_all_epochs.csv` and
 `v2_nri_sessions.csv`.
 
 ## License
-<Add an MIT or CC-BY-4.0 license>
+MIT License (see LICENSE).
