@@ -22,7 +22,7 @@ NOT redistributed here; only per-epoch/per-session derived metrics.
   subject-level RM-ANOVA and cluster-robust sensitivity checks) and the Fig. 2 plot
 
 ## Reproducibility
-- Python: <FILL: e.g. 3.11.x>   OS: Google Colab
+- Python: 3.12.13   OS: Google Colab
 - Package versions: see `requirements.txt`
 - ICA: FastICA, 20 components, random_state = 42, max_iter = 500
 
